@@ -11,5 +11,33 @@
     <video id="background-video" autoplay loop muted poster="pictures/background-picture.jpg">
         <source src="videos/background-video.mp4" type="video/mp4">
     </video>
+    <div id="main-content">
+        <form id="sign-up-form">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <p>Required fields are marked with required</p>
+                <div class="input-group">
+                    <label for="first-name-input"></label>
+                    <input type="text" id="first-name-input" name="firstName">
+                    <label for="last-name-input"></label>
+                    <input type="text" id="last-name-input" name="lastName">
+                </div>
+                <div class="input-group">
+                    <label for="email-input"></label>
+                    <input type="email" id="email-input" name="email">
+                    <label for="phone-number-input"></label>
+                    <input type="tel" id="phone-number-input" name="phoneNumber">
+                </div>
+                <div class="input-group">
+                    <label for="password-input"></label>
+                    <input type="password" id="password-input" name="password">
+                    <label for="confirm-password-input"></label>
+                    <input type="password" id="confirm-password-input" name="confirmPassword">
+                </div>
+            </fieldset>
+        </form>
+        <button type="submit" form="sign-up-form">Create Account</button>
+        <p>Already have an account? <a>Log in</a></p>
+    </div>
 </body>
 </html>
