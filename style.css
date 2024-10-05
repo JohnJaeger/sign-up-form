@@ -112,6 +112,25 @@ fieldset{
     margin: var(--margin-size);
 }
 
+.input-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: var(--padding-size);
+}
+
+.input-wrapper{
+    position: relative;
+}
+
+.input-wrapper > label{
+    position: absolute;
+    font-size: 0.75rem;
+    left: calc(var(--margin-size)/2);
+    top: calc(var(--margin-size)/4);
+}
+
 input[type='text'],
 input[type='tel'],
 input[type='email'],
@@ -128,12 +147,62 @@ input[type='password']{
     color: inherit;
 }
 
-.input-group{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: var(--padding-size);
+.input-wrapper > input:focus{
+    outline: #FFFFFF 1px solid;
+    border-radius: 4px;
+}
+
+input ~ span{
+    position: relative;
+}
+
+input:user-valid ~ span::before{
+    position: absolute;
+    content: "✓";
+    color: #66ff00;
+    font-size: 24px;
+    top: -30px;
+    left: -20px;
+}
+
+input:user-invalid ~ span::after{
+    position: absolute;
+    content: "x";
+    color: #ff000d;
+    font-size: 20px;
+    top: -30px;
+    left: -18px;
+}
+
+.input-wrapper > .input-guide{
+    position: absolute;
+    padding: calc(var(--padding-size)/4);
+    border: var(--theme-color) 1px solid;
+    outline: #FFFFFF 1px solid;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: inherit;
+    font-size: 0.75rem;
+    visibility: hidden;
+}
+
+.input-wrapper > #password-input-guide,
+.input-wrapper > #confirm-password-input-guide{
+    bottom: 3.3em;
+    left: 12ch;
+}
+
+.input-wrapper input:focus ~ .input-guide {
+    animation: delay-visibility 2s forwards;
+    animation-delay: 3s;
+}
+
+.input-guide .typed-text {
+    display: inline-block;
+    overflow: hidden;
+    border-right: .15em solid var(--theme-color); /* Cursor */
+    white-space: nowrap;
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+    animation-delay: 3.5s;
 }
 
 #submit-section{
@@ -154,19 +223,26 @@ button{
     margin: var(--margin-size);
 }
 
+#submit-section > button:active{
+    outline: #FFFFFF 1px solid;
+    border-radius: 4px;
+}
+
 a{
     color: var(--theme-color);
     font-weight: 700;
 }
 
-
-.input-wrapper{
-    position: relative;
+@keyframes typing {
+    from { width: 0;}
+    to { width: calc(100% - 1em); } /* Adjusts to full width of text minus cursor width */
 }
 
-.input-wrapper > label{
-    position: absolute;
-    font-size: 0.75rem;
-    left: calc(var(--margin-size)/2);
-    top: calc(var(--margin-size)/4);
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--text-color) }
+}
+
+@keyframes delay-visibility{
+    from, to { visibility: visible }
 }

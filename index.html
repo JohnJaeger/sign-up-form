@@ -15,35 +15,47 @@
         <form id="sign-up-form">
             <fieldset>
                 <legend>Sign Up</legend>
-                <p>Required fields are marked with required</p>
+                <p>Required fields are followed by *</p>
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <input type="text" id="first-name-input" name="firstName">
-                        <label for="first-name-input">First Name</label>
+                        <input type="text" id="first-name-input" name="firstName" aria-required="true" required>
+                        <label for="first-name-input">First Name<span aria-hidden="true">*</span></label>
+                        <span></span>
                     </div>
                     <div class="input-wrapper">
-                        <input type="text" id="last-name-input" name="lastName">
-                        <label for="last-name-input">Last Name</label>
+                        <input type="text" id="last-name-input" name="lastName" aria-required="true" required>
+                        <label for="last-name-input">Last Name<span aria-hidden="true">*</span></label>
+                        <span></span>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <input type="email" id="email-input" name="email">
-                        <label for="email-input">Email</label>
+                        <input type="email" id="email-input" name="email" aria-required="true" required>
+                        <label for="email-input">Email<span aria-hidden="true">*</span></label>
+                        <span></span>
                     </div>
                     <div class="input-wrapper">
                         <input type="tel" id="phone-number-input" name="phoneNumber">
                         <label for="phone-number-input">Phone Number</label>
+                        <span></span>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-wrapper">
-                        <input type="password" id="password-input" name="password">
-                        <label for="password-input">Password</label>
+                        <input type="password" id="password-input" name="password" minlength="8" maxlength="24" aria-describedby="password-input-guide" aria-required="true" required>
+                        <label for="password-input">Password<span aria-hidden="true">*</span></label>
+                        <span></span>
+                        <div class="input-guide" id="password-input-guide">
+                            <span class="typed-text"><p>Must be 8-24 characters</p></span>
+                        </div>
                     </div>
                     <div class="input-wrapper">
-                        <input type="password" id="confirm-password-input" name="confirmPassword">
-                        <label for="confirm-password-input">Confirm Password</label>
+                        <input type="password" id="confirm-password-input" name="confirmPassword" minlength="8" maxlength="24" aria-describedby="confirm-password-input-guide" aria-required="true" required>
+                        <label for="confirm-password-input">Confirm Password<span aria-hidden="true">*</span></label>
+                        <span></span>
+                        <div class="input-guide" id="confirm-password-input-guide">
+                            <span class="typed-text"><p>Passwords must match</p></span>
+                        </div>
                     </div>
                 </div>
             </fieldset>
