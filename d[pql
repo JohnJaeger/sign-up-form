@@ -1,8 +1,0 @@
-[33m0fa9a82[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Enhance form accessibility and user experience
-[33m048e48a[m Set label positions and add relevant content
-[33m029eab3[m Style and position sign-up form for improved UI
-[33mb0b3fe5[m Add customized Meyer reset to stylesheet
-[33m9cbdb4e[m Create basic HTML structure for sign up form
-[33m3231f99[m Add background video
-[33m50b044b[m Set up HTML boilerplate, CSS, and javascript files
-[33m209ad06[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Initial commit
