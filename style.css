@@ -97,7 +97,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #main-content{
-    width: 40vw;
+    width: 48rem;
     margin: auto;
     border: var(--theme-color) 1px solid;
     box-shadow: 0 0 10px 1px var(--theme-color);
@@ -116,7 +116,7 @@ fieldset{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: var(--padding-size);
 }
 
