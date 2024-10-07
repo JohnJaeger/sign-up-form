@@ -158,9 +158,9 @@ input:user-valid ~ span::before{
     position: absolute;
     content: "✓";
     color: #66ff00;
-    font-size: 24px;
+    font-size: 20px;
     top: -30px;
-    left: -20px;
+    left: -18px;
 }
 
 input:user-invalid ~ span::after{
